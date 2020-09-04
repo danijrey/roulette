@@ -12,7 +12,6 @@ const rouletteSchema = new Schema(
     timestamps: true,
   }
 );
-
 const Roulette = model('Roulette', rouletteSchema);
 
 module.exports = Roulette;

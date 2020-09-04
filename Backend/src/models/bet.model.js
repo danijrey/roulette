@@ -5,25 +5,25 @@ const betSchema = new Schema(
   {
     userID: {
       type: String,
-      required: [true, 'User ID is required']
+      required: [true, 'Id de Ususario es requerido']
     }, 
     rouletteID: {
       type: String,
-      required: [true, 'Roulette ID is required']
+      required: [true, 'Id de Ruleta es requerido']
     },
     num: {
       type: Number,
-      required: [true, 'the number is a required field'],
+      required: [true, 'Número es un campo requerido'],
       min: 0,
       max: 36
     },
     color: {
       type: String,
-      required: [true, 'The color is a required field'],
+      required: [true, 'Color es un campo requerido'],
     },
     amount: {
       type: Number,
-      required: [true, 'The amount is a required field'],
+      required: [true, 'Monto es un campo requerido'],
       max: 10000
     },
   },
@@ -31,7 +31,5 @@ const betSchema = new Schema(
     timestamps: true,
   }
 );
-
 const Bet = model('Bet', betSchema);
-
 module.exports = Bet;

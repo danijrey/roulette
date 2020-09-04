@@ -12,7 +12,6 @@ module.exports = {
   },
   async create(req, res) {
     try {
-      const status = 'close'
       const roulette = await Roulette.create({status: 'close'});
       res.status(200).json(roulette.id);
     } catch (error) {
@@ -23,7 +22,7 @@ module.exports = {
     try {
       const { id } = req.params;
       const roulette = await Roulette.findByIdAndUpdate(id, {status: 'open'});
-      res.status(200).json({ message: 'Roulette is now open' });
+      res.status(200).json({ message: 'La ruleta se encuentra abierta' });
     } catch (error) {
       res.status(400).json({ message: error.message });
     }

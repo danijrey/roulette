@@ -5,6 +5,4 @@ router.route('/list').get(rouletteController.list);
 router.route('/create').post(rouletteController.create);
 router.route('/open/:id').put(rouletteController.open);
 
-
-
 module.exports = router;
